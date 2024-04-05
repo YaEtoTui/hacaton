@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:hacaton_2}
     username: ${POSTGRES_USERNAME:postgres}
-    password: ${POSTGRES_PASSWORD:123}
+    password: ${POSTGRES_PASSWORD:1234567890}
     driver-class-name: org.postgresql.Driver
 
   jpa:
