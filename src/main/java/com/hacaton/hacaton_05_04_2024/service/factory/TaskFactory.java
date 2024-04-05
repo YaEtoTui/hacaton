@@ -24,7 +24,7 @@ public class TaskFactory {
                 task.getPriority(),
                 task.getCustomer(),
                 task.getReceiver(),
-                task.getProject().getName(),
+                task.getProject(),
                 task.getTeam(),
                 task.getTaskType(),
                 task.getStatus(),

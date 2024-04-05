@@ -21,8 +21,6 @@ public class Project {
     String dateStart;
     @Column(name = "date_end")
     String dateEnd;
-    @OneToOne(mappedBy = "project", fetch = FetchType.LAZY)
-    Task task;
 
     public Project(ContextProject contextProject) {
         name = contextProject.getName();

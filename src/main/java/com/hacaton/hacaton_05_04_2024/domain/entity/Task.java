@@ -25,9 +25,8 @@ public class Task {
     String customer;
     @Column(name = "receiver")
     String receiver;
-    @OneToOne()
-    @JoinColumn(name = "project_id")
-    Project project;
+    @Column(name = "project")
+    String project;
     @Column(name = "team")
     String team;
     @Column(name = "task_type")
