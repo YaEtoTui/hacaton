@@ -22,3 +22,9 @@ spring:
     enabled: true
     contexts: hacaton
 
+  web:
+    resources:
+      static-locations: classpath:frontend/
+
+  thymeleaf:
+    prefix: classpath:frontend/

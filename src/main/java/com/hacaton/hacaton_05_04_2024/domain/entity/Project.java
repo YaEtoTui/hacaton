@@ -2,20 +2,24 @@ package com.hacaton.hacaton_05_04_2024.domain.entity;
 
 import com.hacaton.hacaton_05_04_2024.domain.context.ContextProject;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "project")
 @RequiredArgsConstructor
+@Getter
+@Setter
 public class Project {
-    @Column(name = "Наименование")
+    @Column(name = "name")
     @Id
     String name;
-    @Column(name = "Описание")
+    @Column(name = "description")
     String description;
-    @Column(name = "Плановая дата начала")
+    @Column(name = "date_start")
     String dateStart;
-    @Column(name = "Плановая дата завершения")
+    @Column(name = "date_end")
     String dateEnd;
     @OneToOne(mappedBy = "project", fetch = FetchType.LAZY)
     Task task;

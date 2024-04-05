@@ -4,21 +4,25 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "employee")
 @RequiredArgsConstructor
+@Getter
+@Setter
 public class Employee {
-    @Column(name = "Имя")
+    @Column(name = "name")
     String name;
-    @Column(name = "Фамилия")
+    @Column(name = "second_name")
     String secondName;
-    @Column(name = "Команда")
+    @Column(name = "team")
     String team;
-    @Column(name = "Должность")
+    @Column(name = "post")
     String post;
-    @Column(name = "Почта")
+    @Column(name = "email")
     @Id
     String email;
 

@@ -1,57 +1,61 @@
 package com.hacaton.hacaton_05_04_2024.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "task")
 @RequiredArgsConstructor
+@Getter
+@Setter
 public class Task {
 
-    @Column(name = "Номер")
+    @Column(name = "number")
     @Id
     Integer number;
-    @Column(name = "Заголовок")
+    @Column(name = "title")
     String title;
-    @Column(name = "Описание")
+    @Column(name = "description")
     String description;
-    @Column(name = "Приоритет")
+    @Column(name = "priority")
     String priority;
-    @Column(name = "Заказчик")
+    @Column(name = "customer")
     String customer;
-    @Column(name = "Приёмщик")
+    @Column(name = "receiver")
     String receiver;
     @OneToOne()
     @JoinColumn(name = "project_id")
     Project project;
-    @Column(name = "Команда")
+    @Column(name = "team")
     String team;
-    @Column(name = "Тип задачи")
+    @Column(name = "task_type")
     String taskType;
-    @Column(name = "Статус")
+    @Column(name = "status")
     String status;
-    @Column(name = "Состояние")
+    @Column(name = "state")
     String state;
-    @Column(name = "Аналитик")
+    @Column(name = "analyst")
     String analyst;
-    @Column(name = "Разработчик")
+    @Column(name = "developer")
     String developer;
-    @Column(name = "Тестировщик")
+    @Column(name = "tester")
     String tester;
-    @Column(name = "Релиз менеджер")
+    @Column(name = "release_manager")
     String releaseManager;
-    @Column(name = "SP анализ")
+    @Column(name = "analysis")
     Integer analysis;
-    @Column(name = "SP разработка")
+    @Column(name = "development")
     Integer development;
-    @Column(name = "SP тестирование")
+    @Column(name = "testing")
     Integer testing;
-    @Column(name = "SP релиз")
+    @Column(name = "release")
     String release;
-    @Column(name = "Дата создания")
+    @Column(name = "data_create")
     String dataСreate;
-    @Column(name = "Заблокирована задачей с номером")
+    @Column(name = "zznumber")
     String zznumber;
-    @Column(name = "Блокирует задачу с номером")
+    @Column(name = "block_task_number")
     String blockTaskNumber;
 }
