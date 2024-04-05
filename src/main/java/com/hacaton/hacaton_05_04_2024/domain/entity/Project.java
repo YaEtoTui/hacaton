@@ -8,18 +8,22 @@ import lombok.RequiredArgsConstructor;
 @Table(name = "project")
 @RequiredArgsConstructor
 public class Project {
+    @Column(name = "Наименование")
     @Id
     String name;
+    @Column(name = "Описание")
     String description;
-    String datestart;
-    String dateend;
+    @Column(name = "Плановая дата начала")
+    String dateStart;
+    @Column(name = "Плановая дата завершения")
+    String dateEnd;
     @OneToOne(mappedBy = "project", fetch = FetchType.LAZY)
     Task task;
 
     public Project(ContextProject contextProject) {
         name = contextProject.getName();
         description = contextProject.getDescription();
-        datestart = contextProject.getDatestart();
-        dateend = contextProject.getDateend();
+        dateStart = contextProject.getDatestart();
+        dateEnd = contextProject.getDateend();
     }
 }

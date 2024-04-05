@@ -8,29 +8,50 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Task {
 
+    @Column(name = "Номер")
     @Id
     Integer number;
-    String zagolovok;
-    String desccription;
-    String prioritet;
-    String zakaschik;
-    String priemchik;
+    @Column(name = "Заголовок")
+    String title;
+    @Column(name = "Описание")
+    String description;
+    @Column(name = "Приоритет")
+    String priority;
+    @Column(name = "Заказчик")
+    String customer;
+    @Column(name = "Приёмщик")
+    String receiver;
     @OneToOne()
     @JoinColumn(name = "project_id")
     Project project;
+    @Column(name = "Команда")
     String team;
-    String typetask;
+    @Column(name = "Тип задачи")
+    String taskType;
+    @Column(name = "Статус")
     String status;
-    String sostoanie;
-    String analitik;
+    @Column(name = "Состояние")
+    String state;
+    @Column(name = "Аналитик")
+    String analyst;
+    @Column(name = "Разработчик")
     String developer;
-    String testirovchik;
-    String relismanager;
-    Integer spanalis;
-    Integer spdeveloper;
-    Integer sptestirovanie;
-    String sprelis;
-    String datacreate;
+    @Column(name = "Тестировщик")
+    String tester;
+    @Column(name = "Релиз менеджер")
+    String releaseManager;
+    @Column(name = "SP анализ")
+    Integer analysis;
+    @Column(name = "SP разработка")
+    Integer development;
+    @Column(name = "SP тестирование")
+    Integer testing;
+    @Column(name = "SP релиз")
+    String release;
+    @Column(name = "Дата создания")
+    String dataСreate;
+    @Column(name = "Заблокирована задачей с номером")
     String zznumber;
-    String blocktasknumber;
+    @Column(name = "Блокирует задачу с номером")
+    String blockTaskNumber;
 }

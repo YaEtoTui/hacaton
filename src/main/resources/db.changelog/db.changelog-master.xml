@@ -9,19 +9,19 @@
 
         <createTable tableName="project">
 
-            <column name="name" type="varchar">
+            <column name="Наименование" type="varchar">
                 <constraints primaryKey="true"/>
             </column>
 
-            <column name="description" type="varchar">
+            <column name="Описание" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="datestart" type="varchar">
+            <column name="Плановая дата начала" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="dateend" type="varchar">
+            <column name="Плановая дата завершения" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
@@ -29,93 +29,93 @@
 
         <createTable tableName="task">
 
-            <column name="number" type="int4">
+            <column name="Номер" type="int4">
                 <constraints primaryKey="true"/>
             </column>
 
-            <column name="zagolovok" type="varchar">
+            <column name="Заголовок" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="desccription" type="varchar">
+            <column name="Описание" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="prioritet" type="varchar">
+            <column name="Приоритет" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="zakaschik" type="varchar">
+            <column name="Заказчик" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="priemchik" type="varchar">
+            <column name="Приёмщик" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
             <column name="project_id" type="varchar">
                 <constraints foreignKeyName="task_project_fk"
                              referencedTableName="project"
-                             referencedColumnNames="name"/>
+                             referencedColumnNames="Наименование"/>
             </column>
 
-            <column name="team" type="varchar">
+            <column name="Команда" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="typetask" type="varchar">
+            <column name="Тип задачи" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="status" type="varchar">
+            <column name="Статус" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="sostoanie" type="varchar">
+            <column name="Состояние" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="analitik" type="varchar">
+            <column name="Аналитик" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="developer" type="varchar">
+            <column name="Разработчик" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="testirovchik" type="varchar">
+            <column name="Тестировщик" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="relismanager" type="varchar">
+            <column name="Релиз менеджер" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="spanalis" type="int4">
+            <column name="SP анализ" type="int4">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="spdeveloper" type="int4">
+            <column name="SP разработка" type="int4">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="sptestirovanie" type="int4">
+            <column name="SP тестирование" type="int4">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="sprelis" type="varchar">
+            <column name="SP релиз" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="datacreate" type="varchar">
+            <column name="Дата создания" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="zznumber" type="varchar">
+            <column name="Заблокирована задачей с номером" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="blocktasknumber" type="varchar">
+            <column name="Блокирует задачу с номером" type="varchar">
                 <constraints nullable="false"/>
             </column>
 
