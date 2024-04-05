@@ -4,7 +4,7 @@ spring:
     name: hacaton_05_04_2024
 
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:hacaton}
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:hacaton_2}
     username: ${POSTGRES_USERNAME:postgres}
     password: ${POSTGRES_PASSWORD:123}
     driver-class-name: org.postgresql.Driver
@@ -20,5 +20,5 @@ spring:
     default-schema: ${POSTGRES_SCHEMA:public}
     change-log: classpath:db.changelog/db.changelog-master.xml
     enabled: true
-    contexts: store
+    contexts: hacaton
 

@@ -5,4 +5,148 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
+    <changeSet id="hacaton" author="SazhinEA" context="hacaton">
+
+        <createSequence sequenceName="hibernate_sequence" startValue="100" incrementBy="1"/>
+
+        <createTable tableName="project">
+
+            <column name="name" type="varchar">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="description" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="dateStart" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="dateEnd" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <createTable tableName="task">
+
+            <column name="number" type="int4">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="zagolovok" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="desccription" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="prioritet" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="zakaschik" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="priemchik" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="project_id" type="varchar">
+                <constraints foreignKeyName="task_project_fk"
+                             referencedTableName="project"
+                             referencedColumnNames="name"/>
+            </column>
+
+            <column name="team" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="typetask" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sostoanie" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="analitik" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="developer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="testirovchik" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="relismanager" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="spanalis" type="int4">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="spdeveloper" type="int4">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sptestirovanie" type="int4">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sprelis" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="datacreate" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="zznumber" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="blocktasknumber" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <createTable tableName="employee">
+
+            <column name="email" type="varchar">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="name" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="secondname" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="dolchnost" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="team" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
 </databaseChangeLog>
