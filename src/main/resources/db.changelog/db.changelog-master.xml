@@ -7,8 +7,6 @@
 
     <changeSet id="hacaton" author="SazhinEA" context="hacaton">
 
-        <createSequence sequenceName="hibernate_sequence" startValue="100" incrementBy="1"/>
-
         <createTable tableName="project">
 
             <column name="name" type="varchar">

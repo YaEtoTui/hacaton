@@ -6,6 +6,6 @@ import lombok.Value;
 public class CreateProjectRequest {
     String name;
     String description;
-    String datestart;
-    String dateend;
+    String dateStart;
+    String dateEnd;
 }
