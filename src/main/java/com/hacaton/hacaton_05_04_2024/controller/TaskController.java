@@ -25,4 +25,10 @@ public class TaskController {
         return ResponseEntity.ok()
                 .body(taskService.showListTasks());
     }
+
+    @GetMapping("/list/tasks/priority")
+    ResponseEntity<List<TaskResponse>> showListPriority() {
+        return ResponseEntity.ok()
+                .body(taskService.showListPriority());
+    }
 }
