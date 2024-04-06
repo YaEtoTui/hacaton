@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -24,18 +25,18 @@ public class TaskController {
 
     @ModelAttribute("listTasks")
     public List<TaskResponse> listTasks(){
-        return taskService.showListTasks();
+        return new ArrayList<>();
     }
 
-    @GetMapping("/list/tasks")
+    @GetMapping("/")
     String showMainPage(Model model) {
         model.addAttribute("listTasks", taskService.showListTasks());
         return "main";
     }
 
     @GetMapping("/list/tasks/priority")
-    ResponseEntity<List<TaskResponse>> showListPriority() {
-        return ResponseEntity.ok()
-                .body(taskService.showListPriority());
+    String showListPriority(Model model) {
+        model.addAttribute("listTasks", taskService.showListPriority());
+        return "main";
     }
 }
