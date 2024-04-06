@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Проекты</h1>
+<table>
+    <tr>
+        <th>Номер</th>
+        <th>Приоритет</th>
+        <th>Заказчик</th>
+        <th>Приёмщик</th>
+        <th>Проект</th>
+        <th>Команда</th>
+        <th>Тип задачи</th>
+        <th>Статус</th>
+        <th>Состояние</th>
+        <th>Ананлитик</th>
+        <th>Разработчик</th>
+        <th>Тестировщик</th>
+        <th>Релиз мнеджер</th>
+        <th>SP анализ</th>
+        <th>SP разработка</th>
+        <th>SP тестирование</th>
+        <th>SP релиз</th>
+    </tr>
+    <tr th:each="task : ${listTasks}">
+        <td th:text="${task.getNumber()}">502</td>
+        <td th:text="${task.getPriority()}">Высокий</td>
+        <td th:text="${task.getCustomer()}">Кирилл Шапошников</td>
+        <td th:text="${task.getReceiver()}">Егор Михеев</td>
+        <td th:text="${task.getProject()}">Проект 1</td>
+        <td th:text="${task.getTeam()}">Команда 1</td>
+        <td th:text="${task.getTaskType()}">Ошибка</td>
+        <td th:text="${task.getStatus()}">Релиз</td>
+        <td th:text="${task.getState()}">Завершена</td>
+        <td th:text="${task.getAnalyst()}">-</td>
+        <td th:text="${task.getDeveloper()}">-</td>
+        <td th:text="${task.getTester()}">-</td>
+        <td th:text="${task.getReleaseManager()}">Дарья Гаврилова </td>
+        <td th:text="${task.getAnalysis()}">6</td>
+        <td th:text="${task.getDevelopment()}">10</td>
+        <td th:text="${task.getTesting()}">12</td>
+        <td th:text="${task.getRelease()}">1</td>
+
+    </tr>
+    <tr>
+        <td>1014</td>
+        <td>Низкий</td>
+        <td>София Ершова</td>
+        <td>Дарья Захарова</td>
+        <td>Проект 4</td>
+        <td>Команда 1</td>
+        <td>Новая функциональность</td>
+        <td>Разработка</td>
+        <td>В очереди</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>Дарья Гаврилова </td>
+        <td>0</td>
+        <td>4</td>
+        <td>24</td>
+        <td>1</td>
+
+    </tr>
+</table>
+</body>
+</html>
