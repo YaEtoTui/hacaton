@@ -5,8 +5,6 @@ import lombok.Value;
 @Value
 public class TaskResponse {
     Integer number;
-    String title;
-    String description;
     String priority;
     String customer;
     String receiver;
@@ -23,7 +21,4 @@ public class TaskResponse {
     Integer development;
     Integer testing;
     String release;
-    String dataCreate;
-    String zznumber;
-    String blockTaskNumber;
 }

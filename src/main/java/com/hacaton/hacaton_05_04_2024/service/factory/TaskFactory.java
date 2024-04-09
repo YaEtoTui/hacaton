@@ -19,8 +19,6 @@ public class TaskFactory {
     private TaskResponse createTaskResponse(Task task) {
         return new TaskResponse(
                 task.getNumber(),
-                task.getTitle(),
-                task.getDescription(),
                 task.getPriority(),
                 task.getCustomer(),
                 task.getReceiver(),
@@ -36,10 +34,7 @@ public class TaskFactory {
                 task.getAnalysis(),
                 task.getDevelopment(),
                 task.getTesting(),
-                task.getRelease(),
-                task.getDataСreate(),
-                task.getZznumber(),
-                task.getBlockTaskNumber()
+                task.getRelease()
         );
     }
 }
